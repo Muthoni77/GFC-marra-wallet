@@ -3,6 +3,7 @@ import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
 import Icons from "@expo/vector-icons/MaterialIcons"
+import WatchList from "../components/WatchList/WatchList";
 
 const AVATAR_URL =
   "https://clipart-library.com/images/ATbrxjpyc.jpg";
@@ -46,18 +47,17 @@ const HomeScreen = () => {
             {/* <Icons name="notifications" size={24} color={colors.text}/> */}
           </TouchableOpacity>
         </View>
-        <View style={{ flexDirection: "column", paddingHorizontal: 24, gap: 14 ,marginTop:20,}}>
+        <View style={{  paddingHorizontal: 24, gap: 16 ,}}>
         <TouchableOpacity
             style={{
               flex: 1,
-              // width:100,
               height:150,
               borderRadius: 12,
               borderWidth: 1,
               borderColor: colors.border,
               alignItems: "center",
               paddingHorizontal: 24,
-              flexDirection: "row",
+              // flexDirection: "row",
               gap: 12,
              
             }}
@@ -69,17 +69,15 @@ const HomeScreen = () => {
                 fontSize: 16,
                 color: colors.text,
                 opacity: 0.5,
-                alignItems: "center",
-                justifyContent:"center",
-                marginBottom:80,
-                paddingLeft:70
+                // bottom:30,
+                // left:60
                 
               }}
               // numberOfLines={1}
             >
               Your Portfolio
             </Text>
-            <View style={{ flexDirection: "row",  gap: 10,alignItems:"center" ,justifyContent:"center",position:"absolute",paddingHorizontal:80}}>
+            <View style={{ flexDirection: "row",  gap: 10 }}>
            
             <Icons
               name="attach-money"
@@ -105,11 +103,7 @@ const HomeScreen = () => {
                 color: colors.text,
                 opacity: 0.5,
                 paddingHorizontal:24,
-              
-                marginTop:50,
-                textAlign:"center" ,
-                
-                
+                            
               }}
               
             >
@@ -186,11 +180,13 @@ const HomeScreen = () => {
               color={colors.text}
               style={{ opacity: 0.5 }}
             />
-          </TouchableOpacity>
+          </TouchableOpacity> 
 
         </View>
 
         </View>
+        <WatchList/>
+       
         
       </SafeAreaView>
     </ScrollView>
