@@ -22,7 +22,15 @@ const WatchList = () => {
   price:"price 2",
   status:"status 2",
   id:"id 2",
-    },   {
+    }, 
+    {
+      icon:"icon 1",
+      title:"title 1",
+      shortTitle:"sm",
+      price:"pricw 1",
+      status:"status 1",
+      id:"id 1"
+      },   {
   icon:"icon 3",
   title:"title 3",
   shortTitle:"sm",

@@ -47,7 +47,7 @@ const HomeScreen = () => {
             {/* <Icons name="notifications" size={24} color={colors.text}/> */}
           </TouchableOpacity>
         </View>
-        <View style={{  paddingHorizontal: 24, gap: 16 ,}}>
+        <View style={{  paddingHorizontal: 24, gap: 16 ,height:110}}>
         <TouchableOpacity
             style={{
               flex: 1,
@@ -65,7 +65,7 @@ const HomeScreen = () => {
            
             <Text
               style={{
-              
+              top:10,
                 fontSize: 16,
                 color: colors.text,
                 opacity: 0.5,
@@ -103,6 +103,7 @@ const HomeScreen = () => {
                 color: colors.text,
                 opacity: 0.5,
                 paddingHorizontal:24,
+                bottom :10
                             
               }}
               

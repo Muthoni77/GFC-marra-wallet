@@ -1,20 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,Pressable} from 'react-native';
 import {DefaultTheme, NavigationContainer, Theme} from "@react-navigation/native"
-// Import [LinearGradient ] from 'expo-linear-gradient';
+
 import RootNavigator from './src/Navigators/RootNavigator';
 import { useMemo } from 'react';
 import { color } from 'react-native-reanimated';
-// import { LinearGradient } from 'expo-linear-gradient';
-
+import  {LinearGradient}  from 'expo-linear-gradient';
 export default function App() {
  const theme: Theme= useMemo(()=>({...DefaultTheme,
   colors:{
     ...DefaultTheme.colors,
-    background : "#f5f5f5",
-    text:"#191919",
+    // background : "#f5f5f5",
+    
     border:"#D9D9D9",
-    Primary:"#i91919"
+    primary: "#fff",
+    text: "#fff",
     
    },
    
@@ -25,15 +25,23 @@ export default function App() {
  );
   return (
     <View style={styles.container}>
+       <LinearGradient
+        // Background Linear Gradient
+        colors={['#301934', 'indigo', 'purple','yellow']}
+        // colors={['rgba(0,0,0,0.8)', 'transparent']}
+        start={{ x: 0, y: 0.7}}
+        style={styles.background}>
      <NavigationContainer theme={theme}>
    
       
      
                 <RootNavigator/>
-                <StatusBar style="dark"/>
-                {/* <Icon name="add-to-queue-button" color="red" /> */}
-
+                <StatusBar/>
+                {/* <StatusBar style="light"/> */}
+               
             </NavigationContainer>
+            {/* <Text style={{color:"#fff"}}>Please work</Text> */}
+            </LinearGradient>
     </View>
   );
 }
@@ -41,7 +49,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     
+  },
+  background: {
+    flex:1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+    height: 200,
+    width: 350,
   },
 });
 
