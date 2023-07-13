@@ -16,11 +16,12 @@ const TabsNavigator = () => {
     
      
     <TabsStack.Navigator 
-    screenOptions={{tabBarShowLabel:false}}
+    screenOptions={{tabBarShowLabel:false,headerTransparent:true}}
     >
     
       <TabsStack.Screen name ="home" component={HomeScreen}  
        options={{
+        headerTransparent: true,
           headerShown: false,
           tabBarIcon(props){
             return <Icons name='home' {...props}/>
@@ -28,6 +29,7 @@ const TabsNavigator = () => {
          }}/>
       <TabsStack.Screen name ="cart" component={HomeScreen}
         options={{
+          headerTransparent: true,
           headerShown: false,
           tabBarIcon(props){
             return <Icons name='cases' {...props}/>
@@ -36,6 +38,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen name ="payment" component={Example}
         options={{
+          headerTransparent: true,
           headerShown: false,
           tabBarIcon(props){
             return <Icons name='account-balance-wallet' {...props}/>
@@ -43,6 +46,7 @@ const TabsNavigator = () => {
          }}/>
       <TabsStack.Screen name ="profile" component={Example}
         options={{
+          headerTransparent: true,
           headerShown: false,
           tabBarIcon(props){
             return <Icons name='person' {...props}/>

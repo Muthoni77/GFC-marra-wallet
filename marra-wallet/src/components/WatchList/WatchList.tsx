@@ -42,7 +42,8 @@ const WatchList = () => {
 
   return (
     <View style={{gap:12,borderWidth:1,borderColor:colors.border,margin:20,borderRadius:16,
-    padding:15}}>
+    padding:15,  backgroundColor: "#4162D0",
+    opacity: 0.2,}}>
        <Header/>
        <FlatList
         data={coins} 
