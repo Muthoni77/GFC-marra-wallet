@@ -48,8 +48,8 @@ const HomeScreen = () => {
                 // borderColor:colors.border,
               }}
             >
-              <Text style={{ color: colors.text }}>Balance $</Text>
-              <Text style={{ color: colors.text, fontWeight: "bold" }}>
+              <Text style={{ color: "white"}}>Balance $</Text>
+              <Text style={{ color: "white", fontWeight: "bold" }}>
                 0.00
               </Text>
             </TouchableOpacity>
@@ -68,7 +68,7 @@ const HomeScreen = () => {
                 // flexDirection: "row",
 
                 backgroundColor: "#CFAEE5",
-                opacity: 0.2,
+                // opacity: 0.2,
               }}
             >
               <View style={{ gap: 12 }}>
@@ -129,8 +129,8 @@ const HomeScreen = () => {
               <TouchableOpacity
                 style={{
                   flex: 1,
-                  width: 100,
-                  height: 100,
+                  width: 80,
+                  height: 80,
                   borderRadius: 12,
                   borderWidth: 1,
                   borderColor: colors.border,
@@ -146,7 +146,7 @@ const HomeScreen = () => {
                   style={{
                     flex: 1,
                     fontSize: 16,
-                    color: colors.text,
+                    color: "white",
                     opacity: 0.5,
                   }}
                 >
@@ -155,7 +155,7 @@ const HomeScreen = () => {
                 <Icons
                   name="credit-card"
                   size={24}
-                  color={colors.text}
+                  color= "white"
                   style={{ opacity: 0.5 }}
                 />
               </TouchableOpacity>
@@ -163,8 +163,8 @@ const HomeScreen = () => {
               <TouchableOpacity
                 style={{
                   flex: 1,
-                  width: 100,
-                  height: 100,
+                  width: 80,
+                  height: 80,
                   borderRadius: 12,
                   borderWidth: 1,
                   borderColor: colors.border,
@@ -173,15 +173,15 @@ const HomeScreen = () => {
                   flexDirection: "row",
                   gap: 12,
                   backgroundColor: "#4162D0",
-                  opacity: 0.2,
+                  opacity:1
                 }}
               >
                 <Text
                   style={{
                     flex: 1,
                     fontSize: 16,
-                    color: colors.text,
-                    opacity: 0.5,
+                    color: "white",
+                  
                   }}
                 >
                   Sell Crypto
@@ -189,7 +189,7 @@ const HomeScreen = () => {
                 <Icons
                   name="attach-money"
                   size={24}
-                  color={colors.text}
+                  color="white"
                   style={{ opacity: 0.5 }}
                 />
               </TouchableOpacity>
