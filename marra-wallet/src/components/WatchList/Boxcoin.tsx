@@ -12,6 +12,7 @@ const Boxcoin = ({ item }: any) => {
         alignItems: "center",
         justifyContent: "space-between",
         marginBottom:20,
+ 
         
       }}
     >

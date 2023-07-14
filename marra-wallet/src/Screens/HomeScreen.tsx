@@ -1,4 +1,11 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, FlatList } from "react-native";
+import {
+  View,
+  Text,
+  ScrollView,
+  Image,
+  TouchableOpacity,
+  FlatList,
+} from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useTheme } from "@react-navigation/native";
@@ -25,9 +32,7 @@ const HomeScreen = () => {
   return (
     <ScreenGradient>
       <ScrollView>
-
-      <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
-        
+        <SafeAreaView style={{ paddingVertical: 24, gap: 24 }}>
           <View
             style={{
               paddingHorizontal: 24,
@@ -35,7 +40,7 @@ const HomeScreen = () => {
               flexDirection: "row",
               alignItems: "center",
               gap: 120,
-              justifyContent:"space-between"
+              justifyContent: "space-between",
               // marginLeft:24,
             }}
           >
@@ -51,8 +56,8 @@ const HomeScreen = () => {
                 paddingHorizontal: 14,
                 flexDirection: "row",
                 height: 40,
-                width:20,
-      
+                width: 20,
+
                 alignItems: "center",
                 justifyContent: "center",
                 borderRadius: 22,
@@ -61,10 +66,8 @@ const HomeScreen = () => {
                 // borderColor:colors.border,
               }}
             >
-              <Text style={{ color: "white"}}>Balance $</Text>
-              <Text style={{ color: "white", fontWeight: "bold" }}>
-                0.00
-              </Text>
+              <Text style={{ color: "white" }}>Balance $</Text>
+              <Text style={{ color: "white", fontWeight: "bold" }}>0.00</Text>
             </TouchableOpacity>
           </View>
           <View style={{ paddingHorizontal: 24, gap: 16, height: 110 }}>
@@ -78,10 +81,7 @@ const HomeScreen = () => {
                 alignItems: "center",
                 paddingHorizontal: 24,
 
-                // flexDirection: "row",
-
-                // backgroundColor: "#4162D0",
-                opacity: 1,
+                backgroundColor: "rgba(3, 4, 95, 0.2)",
               }}
             >
               <View style={{ gap: 12 }}>
@@ -90,10 +90,9 @@ const HomeScreen = () => {
                     top: 10,
                     fontSize: 16,
                     color: "white",
-                    left:24,
+                    left: 24,
                     // opacity: 0.5,
                   }}
-              
                 >
                   Your Portfolio
                 </Text>
@@ -137,7 +136,6 @@ const HomeScreen = () => {
                 flexDirection: "row",
                 paddingHorizontal: 24,
                 gap: 14,
-                
               }}
             >
               <TouchableOpacity
@@ -152,8 +150,8 @@ const HomeScreen = () => {
                   paddingHorizontal: 24,
                   flexDirection: "row",
                   gap: 12,
-                  // backgroundColor: "#4162D0",
-                  // opacity: 0.2,
+                  backgroundColor: 'rgba(3, 4, 95, 0.2)',
+
                 }}
               >
                 <Text
@@ -169,7 +167,7 @@ const HomeScreen = () => {
                 <Icons
                   name="credit-card"
                   size={24}
-                  color= "white"
+                  color="white"
                   // style={{ opacity: 0.5 }}
                 />
               </TouchableOpacity>
@@ -186,8 +184,8 @@ const HomeScreen = () => {
                   paddingHorizontal: 24,
                   flexDirection: "row",
                   gap: 12,
-                  // backgroundColor: "#4162D0",
-                  opacity:1
+                  backgroundColor: 'rgba(3, 4, 95, 0.2)',
+
                 }}
               >
                 <Text
@@ -195,7 +193,6 @@ const HomeScreen = () => {
                     flex: 1,
                     fontSize: 18,
                     color: "white",
-                  
                   }}
                 >
                   Sell Crypto
@@ -209,46 +206,48 @@ const HomeScreen = () => {
               </TouchableOpacity>
             </View>
           </View>
-               {/* category section */}
-        <FlatList
-          data={Categories}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{
-            paddingHorizontal: 16,
-            gap: 12,}}
-          renderItem={({ item, index }) => {
-            const isSelected = categoryIndex === index;
-            
+          {/* category section */}
+          <FlatList
+            data={Categories}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{
+              paddingHorizontal: 16,
+              gap: 12,
+            }}
+            renderItem={({ item, index }) => {
+              const isSelected = categoryIndex === index;
 
-            return (
-              
-              <TouchableOpacity onPress={()=> setCategoryIndex(index)}
-                style={{
-                  
-                  // backgroundColor: isSelected ? "grey" : colors.card,
-                  paddingHorizontal: 20,
-                  paddingVertical: 12,
-                  borderRadius: 100,
-                  borderWidth: isSelected ? 1: 0,
-                  borderColor: colors.border,
-                }}
-              >
-                <Text
-                  style={{ color: isSelected ? "white": "white",
-                    fontWeight: "600",
-                    fontSize: 14,
-                    opacity: isSelected ? 0.5: 1,
+              return (
+                <TouchableOpacity
+                  onPress={() => setCategoryIndex(index)}
+                  style={{
+                    
+
+                    backgroundColor: isSelected ? 'rgba(3, 4, 95, 0.2)' : "",
+                    paddingHorizontal: 20,
+                    paddingVertical: 12,
+                    borderRadius: 100,
+                    borderWidth: isSelected ? 1 : 0,
+                    borderColor: colors.border,
                   }}
                 >
-                  {item}
-                </Text>
-              </TouchableOpacity>
-            );
-          }}
-        />
-        
-        {/* list of coins */}
+                  <Text
+                    style={{
+                      color: isSelected ? "white" : "white",
+                      fontWeight: "600",
+                      fontSize: 14,
+                      opacity: isSelected ? 0.5 : 1,
+                    }}
+                  >
+                    {item}
+                  </Text>
+                </TouchableOpacity>
+              );
+            }}
+          />
+
+          {/* list of coins */}
           <WatchList />
         </SafeAreaView>
       </ScrollView>

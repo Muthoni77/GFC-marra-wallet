@@ -74,12 +74,12 @@ const WatchList = () => {
     <View
       style={{
         gap: 12,
-        // borderWidth: 1,
+        borderWidth: 1,
         margin: 20,
-        // borderRadius: 16,
+        borderRadius: 16,
         padding: 10,
-        //  backgroundColor: "#4162D0",
-        opacity: 1,
+        backgroundColor:'rgba(3, 4, 95, 0.2)',
+        
       }}
     >
       <Header />
