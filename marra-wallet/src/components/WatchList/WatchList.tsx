@@ -79,8 +79,11 @@ const WatchList = () => {
         borderRadius: 16,
         padding: 10,
         backgroundColor:'rgba(3, 4, 95, 0.2)',
+        borderColor:"gray"
         
       }}
+      
+      // numberOfLines={1}
     >
       <Header />
       <FlatList

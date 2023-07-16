@@ -26,7 +26,7 @@ const Header = () => {
       Last price
     </Text>
     <View>
-      <Text style={{fontSize:16, color:"white"}}>Change</Text>
+      <Text style={{fontSize:16, color:"white"}}>Change%</Text>
     </View>
   </View>
   )
