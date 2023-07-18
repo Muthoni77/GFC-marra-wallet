@@ -4,10 +4,11 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../Screens/HomeScreen";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import { FontAwesome } from "@expo/vector-icons";
+import PortfolioScreen from "../Screens/PortfolioScreen";
 export type TabsStackParamList = {
   home: undefined;
   markets: undefined;
-  futures: undefined;
+  portfolio: undefined;
   browser: undefined;
   settings: undefined;
 };
@@ -32,6 +33,17 @@ const TabsNavigator = () => {
           },
         }}
       />
+        <TabsStack.Screen
+        name="portfolio"
+        component={PortfolioScreen}
+        options={{
+          headerTransparent: true,
+          headerShown: false,
+          tabBarIcon(props) {
+            return <Icons name="work" {...props} />;
+          },
+        }}
+      />
       <TabsStack.Screen
         name="markets"
         component={HomeScreen}
@@ -43,17 +55,7 @@ const TabsNavigator = () => {
           },
         }}
       />
-      {/* <TabsStack.Screen
-        name="futures"
-        component={Example}
-        options={{
-          headerTransparent: true,
-          headerShown: false,
-          tabBarIcon(props) {
-            return <Icons name="credit-card" {...props} />;
-          },
-        }}
-      /> */}
+    
 
       <TabsStack.Screen
         name="browser"
