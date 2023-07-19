@@ -5,6 +5,8 @@ import HomeScreen from "../Screens/HomeScreen";
 import Icons from "@expo/vector-icons/MaterialIcons";
 import { FontAwesome } from "@expo/vector-icons";
 import PortfolioScreen from "../Screens/PortfolioScreen";
+import SettingScreen from "../Screens/SettingScreen";
+
 export type TabsStackParamList = {
   home: undefined;
   markets: undefined;
@@ -70,7 +72,7 @@ const TabsNavigator = () => {
       />
       <TabsStack.Screen
         name="settings"
-        component={Example}
+        component={SettingScreen}
         options={{
           headerTransparent: true,
           headerShown: false,

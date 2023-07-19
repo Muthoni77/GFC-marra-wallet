@@ -173,7 +173,7 @@ const Portfolio = () => {
                   style={{
                     flexDirection: "row",
                     paddingHorizontal: 24,
-                    paddingVertical: 14,
+                    paddingVertical: 10,
                     gap: 10,
                   }}
                 >
@@ -194,7 +194,7 @@ const Portfolio = () => {
                     }}
                   >
                     <Icons
-                      name="add"
+                      name="local-atm"
                       size={24}
                       color="white"
                       // style={{ opacity: 0.5 }}
@@ -207,7 +207,7 @@ const Portfolio = () => {
                         // opacity: 0.5,
                       }}
                     >
-                      Add Money
+                      Stake
                     </Text>
                   </TouchableOpacity>
 
@@ -228,7 +228,7 @@ const Portfolio = () => {
                     }}
                   >
                     <Icons
-                      name="person-add"
+                      name="sync"
                       size={24}
                       color="white"
                       // style={{ opacity: 0.5 }}
@@ -240,7 +240,7 @@ const Portfolio = () => {
                         color: "white",
                       }}
                     >
-                      Request
+                      Swap
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -377,7 +377,7 @@ const Card = () => {
       </View>
 
       <View>
-        <Text style={{ fontSize: 18, color: "white" }}>$0.92</Text>
+        <Text style={{ fontSize: 16, color: "white" ,left:68 , fontWeight:'700'}}>$0.92</Text>
         <Text style={{ fontSize: 16, color: "#F61491" }}> -$0.04 .-4.37%</Text>
       </View>
     </View>
