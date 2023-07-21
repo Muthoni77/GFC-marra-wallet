@@ -211,8 +211,8 @@ const HomeScreen = () => {
             <TouchableOpacity
                 style={{
                   flex: 1,
-                  // width: 80,
-                  height:120,
+                  // width: 300,
+                  // height:120,
                   borderRadius: 12,
                   borderWidth: 1,
                   borderColor: colors.border,
@@ -222,6 +222,7 @@ const HomeScreen = () => {
                   gap: 12,
                   backgroundColor: 'rgba(3, 4, 95, 0.2)',
                   margin:20,
+                  paddingVertical:14
 
                 }}
               >
@@ -308,7 +309,7 @@ const HomeScreen = () => {
                   color="white"
                   style={{ paddingHorizontal:24 }}
                 />
-     <View style={{}}>
+     <View style={{paddingVertical:14,paddingHorizontal:24}}>
           <Text
             style={{
               fontWeight: "bold",
@@ -329,7 +330,7 @@ const HomeScreen = () => {
       {/* last price */}
       <View>
         <Text style={{fontSize:18, color:"white"}}>5 points</Text>
-        <Text style={{color:"white"}}>Daily Open</Text>
+        <Text style={{color:"white", opacity:0.5}}>Daily Open</Text>
       </View>
 
      
